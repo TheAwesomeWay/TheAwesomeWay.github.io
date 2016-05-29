@@ -1,0 +1,131 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; *behavior: url(../scripts/addons/boxsizing.htc);
+}
+
+body {
+  font-family: 'Open Sans';
+  font: 100%/1.5em;
+  background-color: #c4c4c4;
+}
+
+.container {
+  background-color: #fff;
+  width: 90%;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 0 0 0;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.colms {
+  float: left;
+  margin: 1em 0 1em;
+  padding: 0 1em;
+}
+
+.colms_img {
+  margin: 0;
+  padding: 0;
+}
+
+.colms.col-3 { width: 33.333333333% }
+.colms.col-2 { width: 50% }
+.colms.col-25 { width: 25% }
+.colms.col-1 { width: 100% }
+.colms_img.col-1 { width: 100% }
+
+.center {
+  text-align: center;
+}
+.right {
+  text-align: right;
+}
+
+.colms.col-f { width: 50% }
+.footer{
+  background-color: #F2EFC4;
+  box-shadow:  0px -1px 4px 0 rgba(0,0,0,0.5);
+  font-size: 12px;
+  color: #6d6d6d;
+}
+
+a.mymy {
+  color: #454545;
+  text-decoration: none;
+  user-select: none;
+  outline: none;
+}
+a.mymy:hover { color: #454545;}
+a.mymy:active { color: #454545; }
+
+.btn-head{
+  float: right;
+  padding: 5% 0;
+}
+
+a.btn {
+  color: #fff; /* цвет текста */
+  text-decoration: none; /* убирать подчёркивание у ссылок */
+  user-select: none; /* убирать выделение текста */
+  background: rgb(212,75,56); /* фон кнопки */
+  padding: .7em 1.5em;  отступ от текста */
+  outline: none; /* убирать контур в Mozilla */
+}
+a.btn:hover { background: rgb(232,95,76); } /* при наведении курсора мышки */
+a.btn:active { background: rgb(152,15,0); } /* при нажатии */
+
+@media screen and (max-width: 1025px) {
+  .container {
+    width: 99%;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .colms.col-3,
+  .colms.col-2,
+  .colms.col-1,
+  .colms_img.col-1 { width: 100% }
+  .colms.col-25 { width: 50% }
+  .btn-head{
+    float: none;
+    text-align: center;
+  }
+
+}
+
+/*@media screen and (max-width: 480px) {
+
+   html {
+      -webkit-text-size-adjust: none;
+   }
+   body::after{
+     content: "480"
+   }
+} */
+
+img {
+   max-width: 100%;
+   height: auto;
+   width: auto\9; /* ie8 */
+}
+
+
+.container:before,
+.container:after,
+.row:before,
+.row:after,
+.clear:before,
+.clear:after {
+  content: " ";
+  display: table;
+}
+
+.container:after,
+.row:after,
+.clear:after {
+  clear: both;
+}
